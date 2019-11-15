@@ -1,0 +1,38 @@
+const Element = document.createElement('h1');
+Element.innerText = "Hello React.Js";
+Container.appendChild(Element);
+
+const User = {
+    firstname: "Duvan",
+    lastname: "Gonzalez",
+    avatar: "https://avatars2.githubusercontent.com/u/42395167?s=40&v=4"
+}
+function getUser(user){
+    return `${user.firstname} ${user.lastname}`;
+}
+
+function getGreeting(user){
+    if(user){
+        return (
+            <h1>Hello {Name},  with React.Js in function name is {getUser(User)}</h1>
+            );
+    }
+    return <h1>Hello, your name is not</h1>
+}
+    
+const Name = "Duvan";
+const Element = <div>{getGreeting(User)} <img src={User.avatar} /></div>
+
+constructor(props){
+    super(props)
+
+    this.handleClick = this.handleClick.bind(this)
+}
+
+handleClick(){
+    console.log(this);
+}
+
+handleClick = () => {
+    console.log(this)
+}
